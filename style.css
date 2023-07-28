@@ -37,6 +37,9 @@ h3 {
 h4 {
   font-size: 20px;
 }
+h5 {
+  font-size: 18px;
+}
 .span-h2 {
   font-size: 35px;
   font-weight: 400;
@@ -135,7 +138,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin: 5.5rem auto 5rem;
 }
 .hero-text {
   width: 45%;
@@ -188,7 +191,6 @@ button {
   max-width: 30rem;
   width: 100%;
   height: auto;
-  float: right;
 }
 
 /* ----------Services----------- */
@@ -198,6 +200,7 @@ button {
   background: var(--shade-light-background, #f9f9ff);
   padding: 2.5rem 0;
   margin: 2rem 0;
+  position: relative;
 }
 .service {
   display: flex;
@@ -215,6 +218,19 @@ button {
   width: 100%;
   min-height: 17rem;
   height: 100%;
+  transition: margin 0.5s;
+}
+.service-active {
+  margin: 3rem 0.5rem 1rem;
+  /* border: 1.5px solid rgb(188, 57, 146); */
+}
+.service-active h4 {
+  background: linear-gradient(#f76680, #57007b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service-active p {
+  color: #4a5568;
 }
 .icon {
   width: 2.625rem;
@@ -239,7 +255,40 @@ button {
   font-weight: 400;
   line-height: 162.023%;
 }
-
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dots .dot {
+  margin: 0 2px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e0;
+  height: 13px;
+  width: 13px;
+}
+.dots .dot-active {
+  height: 18px;
+  width: 18px;
+  background: linear-gradient(#f76680, #57007b);
+}
+.back-circle {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  position: absolute;
+}
+.back-circle1 {
+  left: 25%;
+  top: -2rem;
+  z-index: -2;
+}
+.back-circle2 {
+  left: 10%;
+  bottom: -2rem;
+  z-index: -2;
+}
 /* ------------Information------------- */
 .info {
   display: flex;
@@ -315,16 +364,22 @@ button {
   background: #f7f7fa;
   padding: 3rem 0;
   margin: 1rem 0 4rem;
+  position: relative;
 }
 .logo-lists .logos {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .logo-lists .logos .logo {
   margin: 0 1.2rem;
 }
-
+.back-circle3 {
+  top: -2rem;
+  left: 60%;
+  z-index: -2;
+}
 /* ---------------Customers------------------ */
 .customers .review p {
   width: 500px;
@@ -334,6 +389,7 @@ button {
   line-height: 35px;
   position: relative;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 .customers .review p .apostrophe1 {
   position: absolute;
@@ -367,7 +423,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 0;
+  margin: 4rem 0;
 }
 .customers .customer .rated-person {
   max-width: 200px;
@@ -378,6 +434,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0.5;
 }
 .customers .customer .rated-person .img {
   height: 80px;
@@ -385,6 +442,13 @@ button {
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 15px;
+}
+.customers .customer .active-rated-person {
+  opacity: 1;
+}
+.customers .customer .active-rated-person .img {
+  height: 100px;
+  width: 100px;
 }
 .customers .customer .rated-person .name {
   color: #57007b;
@@ -481,6 +545,7 @@ button {
 }
 .software-building .software .software-img {
   width: 45%;
+  position: relative;
 }
 .software-building .software .software-img .image {
   max-width: 550px;
@@ -536,6 +601,43 @@ button {
 .position-p {
   color: #718096;
   font-size: 14px;
+}
+.circle1 {
+  top: -1rem;
+  left: -5%;
+  background: linear-gradient(225deg, #ffef5e 0%, #f7936f 100%);
+  z-index: -2;
+}
+.circle {
+  height: 2rem;
+  width: 2rem;
+}
+.circle2 {
+  bottom: -1rem;
+  left: 45%;
+  z-index: -2;
+}
+.circle3 {
+  top: -1rem;
+  right: -2%;
+  z-index: -2;
+}
+.circle4 {
+  bottom: -2rem;
+  left: 20%;
+  background: linear-gradient(225deg, #ffef5e 0%, #f7936f 100%);
+  z-index: -2;
+}
+.circle5 {
+  top: -1rem;
+  left: 55%;
+  z-index: -2;
+}
+.circle6 {
+  bottom: -1rem;
+  left: -2%;
+  background: linear-gradient(225deg, #ffef5e 0%, #f7936f 100%);
+  z-index: -2;
 }
 
 /* ---------------------Design and development---------------- */
@@ -645,6 +747,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .tech1 img {
   margin: 1rem 1.5rem;
@@ -684,6 +787,81 @@ button {
   margin: auto;
   padding: 4rem 0;
 }
+.dev-works .works {
+  display: flex;
+}
+.dev-works .works1 {
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+.dev-works .works2 {
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+}
+.dev-works .works .work {
+  border: 1px solid #e7daed;
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  min-height: 160px;
+  padding: 1rem;
+  margin: 2rem;
+  position: relative;
+}
+.dev-works .works .work p {
+  color: #718096;
+  font-size: 14px;
+  margin-top: 0.8rem;
+}
+.dev-works .dev-line {
+  display: flex;
+}
+.dev-works .dev-line .mid-line {
+  /* position: relative; */
+}
+.dev-works .dev-line .mid-line,
+.small-line {
+  width: 100%;
+  margin: auto;
+  height: 2px;
+  color: red;
+  background: linear-gradient(#f76680, #57007b);
+}
+.small-line {
+  width: 2px;
+  height: 40px;
+}
+.line1 {
+  position: absolute;
+  left: 50%;
+  bottom: -55px;
+}
+.line2 {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+}
+.line3 {
+  position: absolute;
+  left: 50%;
+  bottom: -55px;
+}
+.line4 {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+}
+.line5 {
+  position: absolute;
+  right: 50%;
+  bottom: -55px;
+}
+.line6 {
+  position: absolute;
+  right: 50%;
+  top: -55px;
+}
 
 /* ------------Fearured Resources-------- - */
 .resources {
@@ -714,6 +892,7 @@ button {
   color: #57007b;
   padding: 0;
   margin-top: 0.85rem;
+  cursor: pointer;
 }
 .resources .resource i {
   margin-left: 8px;
@@ -724,23 +903,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 90%;
   margin: auto;
   background: linear-gradient(#f1f1f5, #e4ecf7);
   border-radius: 20px;
   padding: 4rem;
-  position: relative;
 }
-.footer .hire .footer-img1 {
-  position: absolute;
-  top: 25px;
-  right: 111px;
-}
-.footer .hire .footer-img2 {
-  position: absolute;
-  bottom: 30px;
-  right: 110px;
-}
+
 .footer .hire h2 {
   margin: 0;
   text-align: left;
@@ -758,6 +928,17 @@ button {
   border-radius: 5px;
   background: linear-gradient(#ffc656, #f16063);
   cursor: pointer;
+  position: relative;
+}
+.footer-img1 {
+  position: absolute;
+  top: -70px;
+  right: 22%;
+}
+.footer-img2 {
+  position: absolute;
+  bottom: -70px;
+  right: 22%;
 }
 .footer .footer-main {
   display: flex;
@@ -766,9 +947,6 @@ button {
   width: 90%;
   margin: auto;
   margin: 5rem auto 3rem;
-}
-.footer .footer-main h5 {
-  font-size: 18px;
 }
 .footer .footer-main p,
 .footer .footer-main a {
