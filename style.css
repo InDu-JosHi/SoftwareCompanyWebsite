@@ -8,6 +8,9 @@
   font-family: Inter;
   scroll-behavior: smooth;
 }
+html {
+  overflow-x: hidden;
+}
 body {
   overflow-x: hidden;
 }
@@ -1052,6 +1055,7 @@ button {
     margin: 0 0.85rem;
     font-size: 15px;
   }
+  .logo,
   .logo p {
     padding: 0px;
   }
@@ -1115,6 +1119,9 @@ button {
     align-items: center;
     padding: 0;
   }
+  .footer .logo {
+    justify-content: flex-start;
+  }
   .hamburger {
     display: block;
   }
@@ -1122,7 +1129,7 @@ button {
     display: block;
   }
   .nav-items {
-    height: 90vh;
+    height: 88vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1224,7 +1231,7 @@ button {
     margin-bottom: 1rem;
   }
   .footer .footer-main .contact-link {
-    height: auto;
+    height: 6rem;
     margin-top: 1rem;
   }
 }
