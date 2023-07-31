@@ -1128,14 +1128,26 @@ button {
   .nav-bar {
     display: block;
   }
+  .nav-item {
+    text-shadow: 0 0 0 rgb(220, 122, 239);
+    transition: all 0.2s;
+  }
+  .nav-item:hover {
+    font-weight: 600;
+    text-shadow: -2px 2px 3px rgb(220, 122, 239);
+  }
   .nav-items {
-    height: 88vh;
+    height: 0vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     border-radius: 0 0 5px 5px;
-    display: none;
+    transition: height 0.5s;
+  }
+  .nav-items.nav-open {
+    height: 100vh;
   }
   .nav-item {
     display: block;
@@ -1234,4 +1246,8 @@ button {
     height: 6rem;
     margin-top: 1rem;
   }
+}
+
+@media screen and (max-width: 500px) {
+  
 }
