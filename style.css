@@ -1249,5 +1249,178 @@ button {
 }
 
 @media screen and (max-width: 500px) {
-  
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    margin: 3rem auto 5rem;
+  }
+  .hero-text {
+    width: 90%;
+  }
+  .hero-img {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    margin-bottom: 1rem;
+  }
+  button {
+    border: none;
+    background: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 25px;
+    line-height: 35px;
+    max-width: 260px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .span-h2 {
+    font-size: 28px;
+    display: inline;
+    line-height: 35px;
+  }
+  .dots {
+    display: none;
+  }
+  .service {
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+  }
+  .sub-service {
+    margin: 1rem 0.5rem;
+  }
+  .info {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0rem;
+  }
+  .info-main2 img {
+    margin-top: 1.5rem;
+  }
+  .info-sub1,
+  .info-main2 {
+    width: 90%;
+  }
+  .info-sub1 .line,
+  .meet-people .line {
+    margin: 1rem auto;
+  }
+  .meet-people {
+    margin-top: 3rem;
+  }
+  .info-sub1 h2,
+  .meet-people h2 {
+    margin: 1rem auto;
+    text-align: center;
+  }
+  .info-sub1 p {
+    text-align: center;
+  }
+  .arrow-right,
+  .arrow-left {
+    bottom: 0;
+  }
+  .logo-lists {
+    margin: 4rem 0;
+  }
+  .customers .review p {
+    max-width: 350px;
+    width: 100%;
+    line-height: 22px;
+    padding: 0 1rem;
+  }
+  .customers .review p .apostrophe2 {
+    right: 0rem;
+    bottom: 0rem;
+    height: 15px;
+    width: 10px;
+  }
+  .customers .review p .apostrophe1 {
+    left: 0rem;
+    top: -1rem;
+    height: 26px;
+    width: 28px;
+  }
+  .case-study h3 {
+    font-size: 16px;
+  }
+  .case-studies .case-study .casestudy-text p {
+    line-height: 18px;
+    font-size: 12px;
+  }
+  .case-studies .case-study .casestudy-text {
+    padding-bottom: 0.8rem;
+  }
+  .case-studies {
+    padding: 3rem 0 4rem;
+    margin-bottom: 2.5rem;
+  }
+  .software-building .software {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 3rem 0;
+  }
+  .software-building .software2 {
+    flex-direction: column;
+  }
+  .software-building .software .software-text {
+    width: 90%;
+  }
+  .software-building .software .software-img {
+    width: 90%;
+    margin: 1rem auto 1.5rem;
+  }
+  .tech1 img,
+  .tech2 img {
+    margin: 0rem 0.5rem;
+  }
+  .fields {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dev-works .works1,
+  .dev-works .works2 {
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .resources {
+    margin-bottom: 2.5rem;
+  }
+  .resources .resource {
+    margin: 1rem 1rem;
+  }
+  .footer .hire {
+    padding: 2.5rem;
+  }
+  .footer .hire h2 {
+    font-size: 25px;
+  }
+  .footer .hire h5 {
+    font-size: 12px;
+  }
+  .footer .footer-main .about p {
+    margin: 1rem 0 1rem;
+  }
+  .footer .footer-main .links {
+    margin: 1rem 0;
+  }
+  .footer .footer-main .contact-link {
+    height: auto;
+  }
 }
