@@ -13,6 +13,7 @@ html {
 }
 body {
   overflow-x: hidden;
+  position: relative;
 }
 :root {
   --Base-white: #ffffff;
@@ -223,34 +224,30 @@ button {
   position: relative;
 }
 .service {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 2.5rem;
 }
 .sub-service {
   border-radius: 5px;
   padding: 1rem;
-  margin: 2rem 0.5rem;
+  margin: 1rem 0 0;
   background-color: #fafafa;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1),
     0 0px 0px 0px rgba(0, 0, 0, 0.1);
-  max-width: 20rem;
+  min-width: 150px;
   width: 100%;
   min-height: 17rem;
   height: 100%;
-  transition: margin 0.5s;
+  transition: margin-top 0.5s, border 0s;
+  overflow: hidden;
 }
-.service-active {
-  margin: 3rem 0.5rem 1rem;
-  /* border: 1.5px solid rgb(188, 57, 146); */
+.sub-service:hover {
+  margin-top: 0.5rem;
+  border: 1.5px solid rgba(188, 57, 146, 0.3);
 }
-.service-active h4 {
+.sub-service:hover h4 {
   background: linear-gradient(#f76680, #57007b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.service-active p {
-  color: #4a5568;
 }
 .icon {
   width: 2.625rem;
@@ -275,23 +272,14 @@ button {
   font-weight: 400;
   line-height: 162.023%;
 }
-.dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
 }
-.dots .dot {
-  margin: 0 2px;
-  border-radius: 50%;
-  border: 1px solid #cbd5e0;
-  height: 13px;
-  width: 13px;
+.swiper-pagination-bullet {
+  background-color: #b82aa5;
 }
-.dots .dot-active {
-  height: 18px;
-  width: 18px;
-  background: linear-gradient(#f76680, #57007b);
-}
+
 .back-circle {
   height: 4rem;
   width: 4rem;
@@ -348,54 +336,61 @@ button {
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
 }
+
+/* -------Logo Lists---------- */
 .meet-people {
-  width: 90%;
-  margin: auto;
+  width: 100%;
   margin-top: 6rem;
   position: relative;
 }
 .meet-people h2 {
-  margin: 0;
-  margin: 1rem 0;
+  width: 90%;
+  margin: 1rem 5%;
   text-align: left;
 }
 .meet-people .line {
   text-align: left;
-  margin: 0;
+  margin: 0 5%;
 }
-.arrow-right,
-.arrow-left {
-  right: 0;
-  bottom: 40px;
-  position: absolute;
-  border: 1px solid #57007b;
-  border-radius: 50%;
-  padding: 9px 10px;
-  background-color: #57007b;
-  color: #fff;
-}
-.arrow-left {
-  right: 60px;
-  color: #57007b;
-  border: 1px solid #57007b;
-  background-color: transparent;
-}
-
-/* -------Logo Lists---------- */
 .logo-lists {
   background: #f7f7fa;
   padding: 2rem 0;
   margin: 1rem 0 4rem;
   position: relative;
 }
-.logo-lists .logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.arrow-right,
+.arrow-left {
+  height: 35px;
+  width: 35px;
+  right: 15px;
+  top: 160px;
+  position: absolute;
+  color: #57007b;
+  border-radius: 50%;
+  border: 1px solid #57007b;
+  background-color: transparent;
 }
+.arrow-left:hover,
+.arrow-right:hover {
+  border: 1px solid #57007b;
+  background-color: #57007b;
+  color: #fff;
+}
+.arrow-left {
+  left: auto;
+  right: 4rem;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "";
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "";
+}
+
 .logo-lists .logos .logo {
-  margin: 0.8rem 1.2rem;
+  margin: 0.5rem 1rem;
 }
 .back-circle3 {
   top: -2rem;
@@ -790,19 +785,19 @@ button {
   content: "";
   position: absolute;
   background: linear-gradient(#f76680, #57007b);
-  height: 4px;
-  width: 0;
+  height: 0px;
+  width: 40%;
   left: 30%;
   bottom: -2px;
   border-radius: 2px;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
 }
 .tech-btn:hover::after {
-  width: 40%;
+  height: 4px;
 }
-.tech-btn::after {
+/* .tech-btn::after {
   background: linear-gradient(#f76680, #57007b);
-}
+} */
 
 /* --------------Development Works---------- */
 .dev-works {
@@ -840,9 +835,14 @@ button {
 .dev-works .dev-line {
   display: flex;
 }
-.dev-works .dev-line .mid-line {
-  /* position: relative; */
+.dev-works .dev-line .trophy {
+  height: 42px;
+  width: 42px;
 }
+.dev-works .line-div .trophy-small {
+  display: none;
+}
+
 .dev-works .dev-line .mid-line,
 .small-line {
   width: 100%;
@@ -887,20 +887,17 @@ button {
 }
 
 /* ------------Fearured Resources-------- - */
+.feature-resources {
+  width: 90%;
+  margin: auto;
+}
 .resources {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0 0 2rem;
 }
 .resources .resource {
-  max-width: 255px;
-  width: 100%;
-  min-height: 315px;
-  height: 100%;
-  margin: 2rem 1rem;
+  margin: 2rem 0;
 }
 .resources .resource img {
-  max-height: 254px;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -908,7 +905,7 @@ button {
 .resources .resource p {
   font-weight: 500;
   color: #2d3748;
-  font-size: 14px;
+  font-size: 16px;
 }
 .resources .resource button {
   float: right;
@@ -933,7 +930,6 @@ button {
   border-radius: 20px;
   padding: 4rem;
 }
-
 .footer .hire h2 {
   margin: 0;
   text-align: left;
@@ -1209,9 +1205,21 @@ button {
     margin: auto;
     margin-top: 5px;
   }
+  /*Development------*/
+  .dev-works .works .work {
+    padding: 1rem;
+    margin: 2rem 0.5rem;
+  }
+  .dev-works .works .work p {
+    font-size: 12px;
+  }
+  .dev-works .works .work h5 {
+    font-size: 14px;
+  }
   /* ---Resources---- */
-  .resources {
-    flex-wrap: wrap;
+
+  .resources .resource p {
+    font-size: 14px;
   }
   .resources .resource {
     min-height: 200px;
@@ -1291,11 +1299,8 @@ button {
     display: inline;
     line-height: 35px;
   }
-  .dots {
-    display: none;
-  }
+
   .service {
-    flex-wrap: wrap;
     width: 90%;
     margin: auto;
   }
@@ -1329,13 +1334,11 @@ button {
   .info-sub1 p {
     text-align: center;
   }
-  .arrow-right,
-  .arrow-left {
-    bottom: 0;
-  }
+
   .logo-lists {
     margin: 4rem 0;
   }
+  /* --customer-- */
   .customers .review p {
     max-width: 350px;
     width: 100%;
@@ -1354,6 +1357,7 @@ button {
     height: 26px;
     width: 28px;
   }
+  /* --case study-- */
   .case-study h3 {
     font-size: 16px;
   }
@@ -1368,6 +1372,7 @@ button {
     padding: 3rem 0 4rem;
     margin-bottom: 2.5rem;
   }
+  /* --software building-- */
   .software-building .software {
     display: flex;
     flex-direction: column-reverse;
@@ -1383,6 +1388,7 @@ button {
     width: 90%;
     margin: 1rem auto 1.5rem;
   }
+  /* --Tech Stack-- */
   .tech1 img,
   .tech2 img {
     margin: 0rem 0.5rem;
@@ -1392,6 +1398,8 @@ button {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  /* --Development work---- */
   .dev-works .works1,
   .dev-works .works2 {
     justify-content: center;
@@ -1399,12 +1407,80 @@ button {
     flex-direction: column;
     align-items: center;
   }
+  .dev-works .dev-line .trophy {
+    display: none;
+  }
+  .dev-works .dev-line .mid-line {
+    display: none;
+  }
+  .small-line {
+    width: 22px;
+    height: 2px;
+  }
+  .line1 {
+    left: -22px;
+    bottom: 50%;
+  }
+  .line2 {
+    left: -22px;
+    top: 50%;
+  }
+  .line3 {
+    left: -22px;
+    bottom: 50%;
+  }
+  .line4 {
+    left: -22px;
+    top: 50%;
+  }
+  .line5 {
+    right: 100%;
+    bottom: 50%;
+  }
+  .line6 {
+    right: 100%;
+    top: 50%;
+  }
+  .dev-works .line-div .trophy-small {
+    display: block;
+  }
+  .dev-works .div-small {
+    display: flex;
+    justify-content: center;
+  }
+  .dev-works .div-small .line-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -1rem;
+  }
+  .trophy-line {
+    width: 2px;
+    height: 92%;
+    background: linear-gradient(#f76680, #57007b);
+  }
+
+  .dev-works .works1 {
+    margin-top: 2rem;
+  }
+  .dev-works .works .work {
+    max-width: 350px;
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    margin: 0.5rem auto 0.5rem;
+    position: relative;
+  }
+
+  /* --resource-- */
   .resources {
     margin-bottom: 2.5rem;
   }
   .resources .resource {
     margin: 1rem 1rem;
   }
+  /* --footer-- */
   .footer .hire {
     padding: 2.5rem;
   }

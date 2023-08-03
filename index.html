@@ -11,6 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -61,42 +65,73 @@
       <div class="back-circle back-circle1"></div>
       <h2>Services we offer</h2>
 
-      <div class="service">
-        <div class="sub-service">
-          <img src="./service-img/icon1.png" class="icon" alt="" />
-          <h4>Mobile App Development</h4>
-          <p>
-            A website is an extension of yourself and we can help you to express
-            it properly. Your website is your number one marketing asset because
-            we live in a digital age.
-          </p>
+      <div class="swiper mySwiper">
+        <div class="service swiper-wrapper">
+
+          <div class="sub-service swiper-slide">
+            <img src="./service-img/icon2.png" class="icon" alt="" />
+            <h4>Software Testing Service</h4>
+            <p>
+              A Website is an extension of yourself and we can help you to
+              express it properly. Your website is your number one marketing
+              asset because we live in a digital age.
+            </p>
+          </div>
+
+          <div class="sub-service swiper-slide">
+            <img src="./service-img/icon1.png" class="icon" alt="" />
+            <h4>Mobile App Development</h4>
+            <p>
+              A website is an extension of yourself and we can help you to
+              express it properly. Your website is your number one marketing
+              asset because we live in a digital age.
+            </p>
+          </div>
+
+          <div class="sub-service swiper-slide service-active">
+            <img src="./service-img/icon3.png" class="icon" alt="" />
+            <h4>Web Design and Development</h4>
+            <p>
+              A Website is an extension of yourself and we can help you to
+              express it properly. Your website is your number one marketing
+              asset because we live in a digital age.
+            </p>
+          </div>
+
+          <div class="sub-service swiper-slide">
+            <img src="./service-img/icon2.png" class="icon" alt="" />
+            <h4>Software Testing Service</h4>
+            <p>
+              A Website is an extension of yourself and we can help you to
+              express it properly. Your website is your number one marketing
+              asset because we live in a digital age.
+            </p>
+          </div>
+
+          <div class="sub-service swiper-slide">
+            <img src="./service-img/icon1.png" class="icon" alt="" />
+            <h4>Mobile App Development</h4>
+            <p>
+              A website is an extension of yourself and we can help you to
+              express it properly. Your website is your number one marketing
+              asset because we live in a digital age.
+            </p>
+          </div>
+
+          <div class="sub-service swiper-slide service-active">
+            <img src="./service-img/icon3.png" class="icon" alt="" />
+            <h4>Web Design and Development</h4>
+            <p>
+              A Website is an extension of yourself and we can help you to
+              express it properly. Your website is your number one marketing
+              asset because we live in a digital age.
+            </p>
+          </div>
+
         </div>
-        <div class="sub-service service-active">
-          <img src="./service-img/icon3.png" class="icon" alt="" />
-          <h4>Web Design and Development</h4>
-          <p>
-            A Website is an extension of yourself and we can help you to express
-            it properly. Your website is your number one marketing asset because
-            we live in a digital age.
-          </p>
-        </div>
-        <div class="sub-service">
-          <img src="./service-img/icon2.png" class="icon" alt="" />
-          <h4>Software Testing Service</h4>
-          <p>
-            A Website is an extension of yourself and we can help you to express
-            it properly. Your website is your number one marketing asset because
-            we live in a digital age.
-          </p>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot dot-active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+    
       <div class="back-circle back-circle2"></div>
     </section>
 
@@ -125,32 +160,55 @@
         </div>
       </div>
 
-      <div class="meet-people">
+      
+      </div>
+    </section>
+
+    <!-- -------Logo list Section---------- -->
+    <section class="meet-people">
         <div class="line"></div>
         <h2>
           <span class="span-h2">Meet the People</span>
           We are Working With
         </h2>
         <button>
-          <i class="arrow-left fa-solid fa-arrow-right fa-rotate-180"></i>
+          <i class="swiper-button-prev arrow-left fa-solid fa-arrow-right fa-rotate-180"></i>
         </button>
         <button>
-          <i class="arrow-right fa-solid fa-arrow-right"></i>
+          <i class="swiper-button-next arrow-right fa-solid fa-arrow-right"></i>
         </button>
-      </div>
-    </section>
-
-    <!-- -------Logo list Section---------- -->
-    <section class="logo-lists">
+        <div class="logo-lists">
       <div class="back-circle back-circle3"></div>
-      <div class="logos">
-        <img class="logo" src="./logolists/Logo-6.png" alt="" />
-        <img class="logo" src="./logolists/Logo-7.png" alt="" />
-        <img class="logo" src="./logolists/Logo-9.png" alt="" />
-        <img class="logo" src="./logolists/logo3.png" alt="" />
-        <img class="logo" src="./logolists/logo5.png" alt="" />
-        <img class="logo" src="./logolists/logo8.png" alt="" />
-        <img class="logo" src="./logolists/logo9.png" alt="" />
+
+      <div class="logos swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/Logo-6.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/Logo-7.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/Logo-9.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/logo3.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/logo5.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/logo8.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/logo9.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="logo" src="./logolists/Logo-9.png" alt="" />
+          </div>
+        </div>
+
+      </div>
       </div>
     </section>
 
@@ -705,62 +763,78 @@
         <span class="span-h2">How development</span>
         through Alcaline works
       </h2>
-      <div class="works works1">
-        <div class="work work1">
-          <h5><span class="p-span">#1 </span>Assemble the right team</h5>
-          <p>
-            We handle all aspects of vetting and choosing the right team that
-            you don't have the time, expertise, or desire to do.
-          </p>
-          <div class="line1 small-line"></div>
+      <div class="div-small">
+        <div class="line-div">
+          <img
+            src="./trophy-img/Trophy_perspective_matte.png"
+            alt=""
+            class="trophy-small"
+          />
+          <div class="trophy-line"></div>
         </div>
-        <div class="work work3">
-          <h5><span class="p-span">#3 </span>Tech architecture</h5>
-          <p>
-            We break monolithic apps into microservices. Decoupling the code
-            allows teams to move faster and more independently.
-          </p>
-          <div class="line3 small-line"></div>
-        </div>
-        <div class="work work5">
-          <h5><span class="p-span">#5 </span>Code reviews</h5>
-          <p>
-            Code reviews before release help detect issues like memory leaks,
-            file leaks, performance signs, and general bad smells.
-          </p>
-          <div class="line5 small-line"></div>
-        </div>
-      </div>
+        <div>
+          <div class="works works1">
+            <div class="work work1">
+              <h5><span class="p-span">#1 </span>Assemble the right team</h5>
+              <p>
+                We handle all aspects of vetting and choosing the right team
+                that you don't have the time, expertise, or desire to do.
+              </p>
+              <div class="line1 small-line"></div>
+            </div>
+            <div class="work work3">
+              <h5><span class="p-span">#2 </span>Tech architecture</h5>
+              <p>
+                We break monolithic apps into microservices. Decoupling the code
+                allows teams to move faster and more independently.
+              </p>
+              <div class="line3 small-line"></div>
+            </div>
+            <div class="work work5">
+              <h5><span class="p-span">#3 </span>Code reviews</h5>
+              <p>
+                Code reviews before release help detect issues like memory
+                leaks, file leaks, performance signs, and general bad smells.
+              </p>
+              <div class="line5 small-line"></div>
+            </div>
+          </div>
 
-      <div class="dev-line">
-        <div class="mid-line"></div>
-        <img src="./trophy-img/Trophy_perspective_matte.png" alt="" />
-      </div>
+          <div class="dev-line">
+            <div class="mid-line"></div>
+            <img
+              class="trophy"
+              src="./trophy-img/Trophy_perspective_matte.png"
+              alt=""
+            />
+          </div>
 
-      <div class="works works2">
-        <div class="work work2">
-          <h5><span class="p-span">#2 </span>Sprint planning</h5>
-          <p>
-            Sprint roadmap is a collective planning effort. Team members
-            collaborate to clarify items and ensure shared understanding.
-          </p>
-          <div class="line2 small-line"></div>
-        </div>
-        <div class="work work4">
-          <h5><span class="p-span">#4 </span>Standups & weekly demos</h5>
-          <p>
-            Standups, weekly demos, and weekly reviews make sure everyone is on
-            the same page and can raise their concerns.
-          </p>
-          <div class="line4 small-line"></div>
-        </div>
-        <div class="work work6">
-          <h5><span class="p-span">#6 </span>Iterative delivery</h5>
-          <p>
-            We divide the implementation process into several checkpoints rather
-            than a single deadline.
-          </p>
-          <div class="line6 small-line"></div>
+          <div class="works works2">
+            <div class="work work2">
+              <h5><span class="p-span">#4 </span>Sprint planning</h5>
+              <p>
+                Sprint roadmap is a collective planning effort. Team members
+                collaborate to clarify items and ensure shared understanding.
+              </p>
+              <div class="line2 small-line"></div>
+            </div>
+            <div class="work work4">
+              <h5><span class="p-span">#5 </span>Standups & weekly demos</h5>
+              <p>
+                Standups, weekly demos, and weekly reviews make sure everyone is
+                on the same page and can raise their concerns.
+              </p>
+              <div class="line4 small-line"></div>
+            </div>
+            <div class="work work6">
+              <h5><span class="p-span">#6 </span>Iterative delivery</h5>
+              <p>
+                We divide the implementation process into several checkpoints
+                rather than a single deadline.
+              </p>
+              <div class="line6 small-line"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -773,55 +847,58 @@
         Resources
       </h2>
 
-      <div class="resources">
-        <div class="resource">
-          <img src="./featured-img/computer-3655665_1280.jpg" alt="" />
-          <p>
-            How to Build a Scalable Application up to 1 Million Users on AWS
-          </p>
-          <button>
-            Read more <i class="fa-solid fa-arrow-right arrow"></i>
-          </button>
-        </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper3">
+        <div class="resources swiper-wrapper">
+          <div class="resource swiper-slide">
+            <img src="./featured-img/computer-3655665_1280.jpg" alt="" />
+            <p>
+              How to Build a Scalable Application up to 1 Million Users on AWS
+            </p>
+            <button>
+              Read more <i class="fa-solid fa-arrow-right arrow"></i>
+            </button>
+          </div>
 
-        <div class="resource">
-          <img src="./featured-img/pexels-photo-450035.webp" alt="" />
-          <p>
-            How to Build a Scalable Application up to 1 Million Users on AWS
-          </p>
-          <button>
-            Read more <i class="fa-solid fa-arrow-right arrow"></i>
-          </button>
-        </div>
+          <div class="resource swiper-slide">
+            <img src="./featured-img/pexels-photo-450035.webp" alt="" />
+            <p>
+              How to Build a Scalable Application up to 1 Million Users on AWS
+            </p>
+            <button>
+              Read more <i class="fa-solid fa-arrow-right arrow"></i>
+            </button>
+          </div>
 
-        <div class="resource">
-          <img src="./featured-img/technology-791029_960_720.jpg" alt="" />
-          <p>
-            How to Build a Scalable Application up to 1 Million Users on AWS
-          </p>
-          <button>
-            Read more <i class="fa-solid fa-arrow-right arrow"></i>
-          </button>
-        </div>
+          <div class="resource swiper-slide">
+            <img src="./featured-img/technology-791029_960_720.jpg" alt="" />
+            <p>
+              How to Build a Scalable Application up to 1 Million Users on AWS
+            </p>
+            <button>
+              Read more <i class="fa-solid fa-arrow-right arrow"></i>
+            </button>
+          </div>
 
-        <div class="resource">
-          <img src="./featured-img/laptop-2234342_1280.jpg" alt="" />
-          <p>
-            How to Build a Scalable Application up to 1 Million Users on AWS
-          </p>
-          <button>
-            Read more <i class="fa-solid fa-arrow-right arrow"></i>
-          </button>
-        </div>
+          <div class="resource swiper-slide">
+            <img src="./featured-img/laptop-2234342_1280.jpg" alt="" />
+            <p>
+              How to Build a Scalable Application up to 1 Million Users on AWS
+            </p>
+            <button>
+              Read more <i class="fa-solid fa-arrow-right arrow"></i>
+            </button>
+          </div>
 
-        <div class="resource">
-          <img src="./featured-img/student-849825_960_720.jpg" alt="" />
-          <p>
-            How to Build a Scalable Application up to 1 Million Users on AWS
-          </p>
-          <button>
-            Read more <i class="fa-solid fa-arrow-right arrow"></i>
-          </button>
+          <div class="resource swiper-slide">
+            <img src="./featured-img/student-849825_960_720.jpg" alt="" />
+            <p>
+              How to Build a Scalable Application up to 1 Million Users on AWS
+            </p>
+            <button>
+              Read more <i class="fa-solid fa-arrow-right arrow"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -882,6 +959,7 @@
       </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
