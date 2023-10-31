@@ -502,7 +502,7 @@ button {
   height: 350px;
   border-radius: 0px 30px 30px 0px;
   border: 1px solid #e7daed;
-  border-left: none;
+  /* border-left: none; */
   padding: 3rem;
   margin-left: -10px;
   position: inherit;
@@ -620,8 +620,8 @@ button {
   font-size: 14px;
 }
 .circle1 {
-  top: -1rem;
-  left: -5%;
+  top: -2rem;
+  left: 5%;
   background: linear-gradient(225deg, #ffef5e 0%, #f7936f 100%);
   z-index: -2;
 }
@@ -795,9 +795,7 @@ button {
 .tech-btn:hover::after {
   height: 4px;
 }
-/* .tech-btn::after {
-  background: linear-gradient(#f76680, #57007b);
-} */
+
 
 /* --------------Development Works---------- */
 .dev-works {
