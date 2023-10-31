@@ -224,21 +224,19 @@ button {
   position: relative;
 }
 .service {
+  padding: 1rem;
   padding-bottom: 2.5rem;
 }
 .sub-service {
   border-radius: 5px;
   padding: 1rem;
-  margin: 1rem 0 0;
+  margin: 1rem;
   background-color: #fafafa;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1),
     0 0px 0px 0px rgba(0, 0, 0, 0.1);
-  min-width: 150px;
-  width: 100%;
   min-height: 17rem;
   height: 100%;
   transition: margin-top 0.5s, border 0s;
-  overflow: hidden;
 }
 .sub-service:hover {
   margin-top: 0.5rem;
@@ -249,6 +247,7 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .icon {
   width: 2.625rem;
   height: 2.625rem;
@@ -273,13 +272,23 @@ button {
   line-height: 162.023%;
 }
 .swiper-pagination-bullet {
+  background: linear-gradient(#f76680, #57007b);
   height: 15px;
   width: 15px;
 }
-.swiper-pagination-bullet {
-  background-color: #b82aa5;
+.swiper-pagination {
+  margin-bottom: 2.2rem;
 }
-
+.swiper-slide {
+  margin: 1rem auto;
+}
+.swiper {
+  position: static;
+}
+.mySwiper2 {
+  display: flex;
+  justify-content: center;
+}
 .back-circle {
   height: 4rem;
   width: 4rem;
@@ -620,8 +629,8 @@ button {
   font-size: 14px;
 }
 .circle1 {
-  top: -2rem;
-  left: 5%;
+  top: -1rem;
+  left: -5%;
   background: linear-gradient(225deg, #ffef5e 0%, #f7936f 100%);
   z-index: -2;
 }
@@ -796,7 +805,6 @@ button {
   height: 4px;
 }
 
-
 /* --------------Development Works---------- */
 .dev-works {
   width: 90%;
@@ -914,6 +922,10 @@ button {
 }
 .resources .resource i {
   margin-left: 8px;
+}
+.mySwiper3 {
+  display: flex;
+  justify-content: center;
 }
 
 /* -----------Footer-------------- */
@@ -1297,14 +1309,13 @@ button {
     display: inline;
     line-height: 35px;
   }
-
-  .service {
-    width: 90%;
-    margin: auto;
-  }
+  /* ---service------ */
   .sub-service {
-    margin: 1rem 0.5rem;
+    border: 1.5px solid rgba(188, 57, 146, 0.3);
+    box-shadow: none;
   }
+
+  /* -----Info-------- */
   .info {
     align-items: center;
     flex-direction: column;
@@ -1475,9 +1486,7 @@ button {
   .resources {
     margin-bottom: 2.5rem;
   }
-  .resources .resource {
-    margin: 1rem 1rem;
-  }
+
   /* --footer-- */
   .footer .hire {
     padding: 2.5rem;
